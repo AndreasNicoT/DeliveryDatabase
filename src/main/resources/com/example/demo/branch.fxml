@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #222831;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.branchController">
+   <children>
+      <Label layoutX="23.0" layoutY="24.0" text="BRANCH" textFill="#00adb5">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Pane layoutX="23.0" layoutY="85.0" prefHeight="156.0" prefWidth="202.0" style="-fx-background-color: #393E46;">
+         <children>
+            <Label layoutX="29.0" layoutY="73.0" text="Nama" textFill="#eeeeee">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label layoutX="28.0" layoutY="116.0" text="Lokasi" textFill="#eeeeee">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <TextField fx:id="txtNamaBranch" layoutX="72.0" layoutY="69.0" prefHeight="25.0" prefWidth="119.0" style="-fx-background-color: #eeeeee;" />
+            <TextField fx:id="txtLokasiBranch" layoutX="72.0" layoutY="112.0" prefHeight="25.0" prefWidth="119.0" style="-fx-background-color: #eeeeee;" />
+            <Label layoutX="12.0" layoutY="31.0" text="Id Branch" textFill="#eeeeee">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtIdBranch" layoutX="72.0" layoutY="27.0" prefHeight="25.0" prefWidth="119.0" style="-fx-background-color: #eeeeee;" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </Pane>
+      <TableView fx:id="tableBranch" layoutX="245.0" layoutY="85.0" prefHeight="297.0" prefWidth="340.0" style="-fx-background-color: #00ADB5;">
+         <columns>
+            <TableColumn fx:id="colIdBranch" prefWidth="68.79998779296875" text="ID BRANCH" />
+            <TableColumn fx:id="colNamaBranch" prefWidth="143.20001220703125" text="NAMA BRANCH" />
+            <TableColumn fx:id="colLokasiBranch" minWidth="0.0" prefWidth="126.4000244140625" text="LOKASI" />
+         </columns>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TableView>
+      <Button fx:id="btnAdd" layoutX="26.0" layoutY="262.0" mnemonicParsing="false" onAction="#Add" prefHeight="26.0" prefWidth="50.0" style="-fx-background-color: #00ADB5;" text="Add" textFill="#eeeeee">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnUpdate" layoutX="99.0" layoutY="262.0" mnemonicParsing="false" onAction="#Update" style="-fx-background-color: #00ADB5;" text="Update" textFill="#eeeeee">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnDelete" layoutX="177.0" layoutY="262.0" mnemonicParsing="false" onAction="#Delete" style="-fx-background-color: #00ADB5;" text="Delete" textFill="#eeeeee">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <ImageView fx:id="backImage" fitHeight="72.0" fitWidth="70.0" layoutX="515.0" layoutY="4.0" onMouseClicked="#SwitchtoMain" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Deliverylogo.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnBack" layoutX="440.0" layoutY="29.0" mnemonicParsing="false" onAction="#SwitchtoMain" prefHeight="26.0" prefWidth="50.0" style="-fx-background-color: #bf1414;" text="BACK" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
